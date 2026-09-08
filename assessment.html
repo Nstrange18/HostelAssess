@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Assessment | HostelAssess</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header class="dashboard-header">
+        <div class="logo">
+            <div class="logo-icon">H</div>
+            <span>Hostel<span class="logo-highlight">Assess</span></span>
+        </div>
+        <div class="user-menu">
+            <div class="user-avatar">OE</div>
+            <div>
+                <strong>Obichukwu Emmanuel</strong>
+                <small>Student</small>
+            </div>
+            <a href="index.html">Logout</a>
+        </div>
+    </header>
+
+    <div class="dashboard-layout">
+        <aside class="sidebar">
+            <a href="student-dashboard.html" class="sidebar-link">
+                <span>▣</span> Dashboard
+            </a>
+            <a href="assessment.html" class="sidebar-link active">
+                <span>★</span> Assessment
+            </a>
+            <a href="complaints.html" class="sidebar-link">
+                <span>!</span> Complaints
+            </a>
+            <a href="#" class="sidebar-link">
+                <span>◉</span> Profile
+            </a>
+            <div class="sidebar-bottom">
+                <a href="index.html" class="sidebar-link">
+                    <span>↪</span> Logout
+                </a>
+            </div>
+        </aside>
+
+        <main class="dashboard-main">
+            <div class="dashboard-heading">
+                <div>
+                    <span class="form-label">HOSTEL ASSESSMENT</span>
+                    <h1>Rate your hostel services</h1>
+                    <p>Please rate each service honestly based on your experience.</p>
+                </div>
+            </div>
+
+            <div class="assessment-container">
+                <div class="assessment-info">
+                    <strong>Okpara Hostel</strong>
+                    <span>Male Hostel • Main Campus</span>
+                </div>
+
+                <form id="assessmentForm">
+                    <!-- WATER -->
+                    <div class="assessment-question">
+                        <div>
+                            <h3>💧 Water Supply</h3>
+                            <p>How would you rate the availability and reliability of water supply?</p>
+                        </div>
+                        <div class="rating-options">
+                            <label>
+                                <input type="radio" name="water" value="1" required>
+                                <span>1</span>
+                                <small>Very Poor</small>
+                            </label>
+                            <label>
+                                <input type="radio" name="water" value="2">
+                                <span>2</span>
+                                <small>Poor</small>
+                            </label>
+                            <label>
+                                <input type="radio" name="water" value="3">
+                                <span>3</span>
+                                <small>Average</small>
+                            </label>
+                            <label>
+                                <input type="radio" name="water" value="4">
+                                <span>4</span>
+                                <small>Good</small>
+                            </label>
+                            <label>
+                                <input type="radio" name="water" value="5">
+                                <span>5</span>
+                                <small>Excellent</small>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- ELECTRICITY -->
+                    <div class="assessment-question">
+                        <div>
+                            <h3>⚡ Electricity</h3>
+                            <p>How would you rate electricity availability?</p>
+                        </div>
+                        <div class="rating-options">
+                            <label>
+                                <input type="radio" name="electricity" value="1" required>
+                                <span>1</span>
+                                <small>Very Poor</small>
+                            </label>
+                            <label>
+                                <input type="radio" name="electricity" value="2">
+                                <span>2</span>
+                                <small>Poor</small>
+                            </label>
+                            <label>
+                                <input type="radio" name="electricity" value="3">
+                                <span>3</span>
+                                <small>Average</small>
+                            </label>
+                            <label>
+                                <input type="radio" name="electricity" value="4">
+                                <span>4</span>
+                                <small>Good</small>
+                            </label>
+                            <label>
+                                <input type="radio" name="electricity" value="5">
+                                <span>5</span>
+                                <small>Excellent</small>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- SANITATION -->
+                    <div class="assessment-question">
+                        <div>
+                            <h3>🧹 Sanitation</h3>
+                            <p>How would you rate the cleanliness and sanitation of the hostel?</p>
+                        </div>
+                        <div class="rating-options">
+                            <label>
+                                <input type="radio" name="sanitation" value="1" required>
+                                <span>1</span>
+                                <small>Very Poor</small>
+                            </label>
+                            <label>
+                                <input type="radio" name="sanitation" value="2">
+                                <span>2</span>
+                                <small>Poor</small>
+                            </label>
+                            <label>
+                                <input type="radio" name="sanitation" value="3">
+                                <span>3</span>
+                                <small>Average</small>
+                            </label>
+                            <label>
+                                <input type="radio" name="sanitation" value="4">
+                                <span>4</span>
+                                <small>Good</small>
+                            </label>
+                            <label>
+                                <input type="radio" name="sanitation" value="5">
+                                <span>5</span>
+                                <small>Excellent</small>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- SECURITY -->
+                    <div class="assessment-question">
+                        <div>
+                            <h3>🛡️ Security</h3>
+                            <p>How safe and secure do you feel within the hostel?</p>
+                        </div>
+                        <div class="rating-options">
+                            <label>
+                                <input type="radio" name="security" value="1" required>
+                                <span>1</span>
+                                <small>Very Poor</small>
+                            </label>
+                            <label>
+                                <input type="radio" name="security" value="2">
+                                <span>2</span>
+                                <small>Poor</small>
+                            </label>
+                            <label>
+                                <input type="radio" name="security" value="3">
+                                <span>3</span>
+                                <small>Average</small>
+                            </label>
+                            <label>
+                                <input type="radio" name="security" value="4">
+                                <span>4</span>
+                                <small>Good</small>
+                            </label>
+                            <label>
+                                <input type="radio" name="security" value="5">
+                                <span>5</span>
+                                <small>Excellent</small>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- MAINTENANCE -->
+                    <div class="assessment-question">
+                        <div>
+                            <h3>🔧 Maintenance</h3>
+                            <p>How would you rate the responsiveness to maintenance problems?</p>
+                        </div>
+                        <div class="rating-options">
+                            <label>
+                                <input type="radio" name="maintenance" value="1" required>
+                                <span>1</span>
+                                <small>Very Poor</small>
+                            </label>
+                            <label>
+                                <input type="radio" name="maintenance" value="2">
+                                <span>2</span>
+                                <small>Poor</small>
+                            </label>
+                            <label>
+                                <input type="radio" name="maintenance" value="3">
+                                <span>3</span>
+                                <small>Average</small>
+                            </label>
+                            <label>
+                                <input type="radio" name="maintenance" value="4">
+                                <span>4</span>
+                                <small>Good</small>
+                            </label>
+                            <label>
+                                <input type="radio" name="maintenance" value="5">
+                                <span>5</span>
+                                <small>Excellent</small>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- COMMENT -->
+                    <div class="comment-section">
+                        <label for="comment">Additional Comments</label>
+                        <textarea id="comment" name="comment" rows="6" placeholder="Tell us anything else about your hostel experience..."></textarea>
+                    </div>
+
+                    <div class="form-submit">
+                        <button type="submit" class="btn btn-primary">Submit Assessment</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

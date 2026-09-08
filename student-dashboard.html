@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard | HostelAssess</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header class="dashboard-header">
+        <div class="logo">
+            <div class="logo-icon">H</div>
+            <span>Hostel<span class="logo-highlight">Assess</span></span>
+        </div>
+        <div class="user-menu">
+            <div class="user-avatar">OE</div>
+            <div>
+                <strong>Obichukwu Emmanuel</strong>
+                <small>Student</small>
+            </div>
+            <a href="index.html">Logout</a>
+        </div>
+    </header>
+
+    <div class="dashboard-layout">
+        <aside class="sidebar">
+            <a href="student-dashboard.html" class="sidebar-link active">
+                <span>▣</span> Dashboard
+            </a>
+            <a href="assessment.html" class="sidebar-link">
+                <span>★</span> Assessment
+            </a>
+            <a href="complaints.html" class="sidebar-link">
+                <span>!</span> Complaints
+            </a>
+            <a href="#" class="sidebar-link">
+                <span>◉</span> Profile
+            </a>
+            <div class="sidebar-bottom">
+                <a href="index.html" class="sidebar-link">
+                    <span>↪</span> Logout
+                </a>
+            </div>
+        </aside>
+
+        <main class="dashboard-main">
+            <div class="dashboard-heading">
+                <div>
+                    <span class="form-label">STUDENT DASHBOARD</span>
+                    <h1>Welcome back, Obichukwu</h1>
+                    <p>Here's an overview of your hostel assessment activity.</p>
+                </div>
+                <a href="assessment.html" class="btn btn-primary">+ New Assessment</a>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span>MY HOSTEL</span>
+                    <strong>Okpara Hostel</strong>
+                    <small>Male Hostel</small>
+                </div>
+                <div class="stat-card">
+                    <span>ASSESSMENTS</span>
+                    <strong>4</strong>
+                    <small>Submitted this session</small>
+                </div>
+                <div class="stat-card">
+                    <span>COMPLAINTS</span>
+                    <strong>2</strong>
+                    <small>Total complaints</small>
+                </div>
+                <div class="stat-card">
+                    <span>RESOLVED</span>
+                    <strong>1</strong>
+                    <small>Complaint resolved</small>
+                </div>
+            </div>
+
+            <div class="dashboard-grid">
+                <div class="dashboard-card">
+                    <div class="card-heading">
+                        <div>
+                            <span>RECENT ASSESSMENT</span>
+                            <h3>Your latest hostel rating</h3>
+                        </div>
+                        <a href="assessment.html">View</a>
+                    </div>
+                    <div class="rating-overview">
+                        <div class="big-rating">
+                            4.2
+                            <small>/5</small>
+                        </div>
+                        <div class="rating-bars">
+                            <div class="rating-row">
+                                <span>Water</span>
+                                <div class="bar">
+                                    <i style="width:82%"></i>
+                                </div>
+                                <strong>4.1</strong>
+                            </div>
+                            <div class="rating-row">
+                                <span>Electricity</span>
+                                <div class="bar">
+                                    <i style="width:76%"></i>
+                                </div>
+                                <strong>3.8</strong>
+                            </div>
+                            <div class="rating-row">
+                                <span>Sanitation</span>
+                                <div class="bar">
+                                    <i style="width:86%"></i>
+                                </div>
+                                <strong>4.3</strong>
+                            </div>
+                            <div class="rating-row">
+                                <span>Security</span>
+                                <div class="bar">
+                                    <i style="width:90%"></i>
+                                </div>
+                                <strong>4.5</strong>
+                            </div>
+                            <div class="rating-row">
+                                <span>Maintenance</span>
+                                <div class="bar">
+                                    <i style="width:84%"></i>
+                                </div>
+                                <strong>4.2</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-card">
+                    <div class="card-heading">
+                        <div>
+                            <span>COMPLAINT STATUS</span>
+                            <h3>Recent complaints</h3>
+                        </div>
+                        <a href="complaints.html">View all</a>
+                    </div>
+                    <div class="complaint-item">
+                        <div>
+                            <strong>Water Supply</strong>
+                            <small>Reported Aug 20, 2026</small>
+                        </div>
+                        <span class="status pending">Pending</span>
+                    </div>
+                    <div class="complaint-item">
+                        <div>
+                            <strong>Broken Light</strong>
+                            <small>Reported Aug 14, 2026</small>
+                        </div>
+                        <span class="status resolved">Resolved</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

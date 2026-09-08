@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | HostelAssess</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="auth-body">
+    <div class="auth-container">
+        <div class="auth-brand">
+            <a href="index.html" class="back-home">← Back to Home</a>
+            <div class="auth-brand-content">
+                <div class="logo-icon large">H</div>
+                <h1>Hostel<span>Assess</span></h1>
+                <p>Share your hostel experience.</p>
+            </div>
+        </div>
+        <div class="auth-form-container">
+            <div class="auth-form wide">
+                <span class="form-label">STUDENT REGISTRATION</span>
+                <h2>Create your account</h2>
+                <p class="form-description">Register to assess your hostel services.</p>
+                <form id="registerForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="surname">Surname</label>
+                            <input type="text" id="surname" name="surname" placeholder="Surname" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="first_name">First Name</label>
+                            <input type="text" id="first_name" name="first_name" placeholder="First name" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="matric_no">Matriculation Number</label>
+                        <input type="text" id="matric_no" name="matric_no" placeholder="e.g. 2022/246668" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="student@example.com" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="level">Level</label>
+                            <select id="level" name="level" required>
+                                <option value="">Select level</option>
+                                <option value="100">100 Level</option>
+                                <option value="200">200 Level</option>
+                                <option value="300">300 Level</option>
+                                <option value="400">400 Level</option>
+                                <option value="500">500 Level</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="department">Department</label>
+                            <input type="text" id="department" name="department" placeholder="Computer Science" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="hostel">Hostel</label>
+                        <select id="hostel" name="hostel" required>
+                            <option value="">Select hostel</option>
+                            <option value="1">Okpara Hostel</option>
+                            <option value="2">Alvan Ikoku Hostel</option>
+                            <option value="3">Ezeilo Hostel</option>
+                            <option value="4">Akintola Hostel</option>
+                            <option value="5">Nwafor Orizu Hostel</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Create a password" minlength="6" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm_password">Confirm Password</label>
+                        <input type="password" id="confirm_password" name="confirm_password" placeholder="Repeat your password" required>
+                    </div>
+                    <label class="checkbox-label terms">
+                        <input type="checkbox" required> I agree to provide accurate information.
+                    </label>
+                    <button type="submit" class="btn btn-primary full-btn">Create Account</button>
+                </form>
+                <p class="register-text">Already have an account? <a href="login.html">Sign in</a></p>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
