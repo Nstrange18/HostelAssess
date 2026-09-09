@@ -1,19 +1,6 @@
-/* ============================================================
-   HOSTEL ASSESSMENT SYSTEM - COMPLETE STYLESHEET
-   ============================================================
-   SUPPORTS:
-   1. admin-dashboard.html
-   2. assessment.html
-   3. complaints.html
-   4. index.html
-   5. login.html
-   6. register.html
-   7. student-dashboard.html
-   ============================================================ */
-
-/* ============================================================
-   1. RESET & BASE STYLES
-   ============================================================ */
+/* ========================================
+   RESET & BASE STYLES
+   ======================================== */
 * {
     margin: 0;
     padding: 0;
@@ -35,10 +22,6 @@
     --success: #059669;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     font-family: Arial, Helvetica, sans-serif;
     background: var(--light);
@@ -58,64 +41,9 @@ textarea {
     font: inherit;
 }
 
-img {
-    max-width: 100%;
-}
-
-/* ============================================================
-   2. BUTTONS (All Pages)
-   ============================================================ */
-.btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 13px 23px;
-    border-radius: 9px;
-    border: none;
-    cursor: pointer;
-    font-weight: 700;
-    font-size: 14px;
-    transition: all 0.2s ease;
-}
-
-.btn-primary {
-    background: var(--primary);
-    color: white;
-}
-
-.btn-primary:hover {
-    background: var(--primary-dark);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(15, 118, 110, 0.3);
-}
-
-.btn-outline {
-    border: 2px solid var(--primary);
-    color: var(--primary);
-    background: transparent;
-}
-
-.btn-outline:hover {
-    background: var(--primary-light);
-}
-
-.btn-light {
-    background: white;
-    color: var(--primary);
-}
-
-.btn-light:hover {
-    background: var(--primary-light);
-    transform: translateY(-2px);
-}
-
-.full-btn {
-    width: 100%;
-}
-
-/* ============================================================
-   3. NAVBAR (index.html)
-   ============================================================ */
+/* ========================================
+   NAVBAR - Used in index.html
+   ======================================== */
 .navbar {
     height: 76px;
     background: var(--white);
@@ -124,9 +52,6 @@ img {
     justify-content: space-between;
     padding: 0 7%;
     border-bottom: 1px solid var(--border);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
 }
 
 .logo {
@@ -163,24 +88,6 @@ img {
     color: var(--text);
     font-size: 14px;
     font-weight: 600;
-    position: relative;
-    transition: color 0.2s;
-}
-
-.navbar nav a::after {
-    content: '';
-    position: absolute;
-    bottom: -4px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: var(--primary);
-    transition: width 0.3s ease;
-}
-
-.navbar nav a:hover::after,
-.navbar nav a.active::after {
-    width: 100%;
 }
 
 .navbar nav a:hover,
@@ -188,9 +95,54 @@ img {
     color: var(--primary);
 }
 
-/* ============================================================
-   4. HERO SECTION (index.html)
-   ============================================================ */
+/* ========================================
+   BUTTONS - Used in all pages
+   ======================================== */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 23px;
+    border-radius: 9px;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+    transform: translateY(-1px);
+}
+
+.btn-outline {
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    background: white;
+}
+
+.btn-outline:hover {
+    background: var(--primary-light);
+}
+
+.btn-light {
+    background: white;
+    color: var(--primary);
+}
+
+.full-btn {
+    width: 100%;
+}
+
+/* ========================================
+   HERO SECTION - Used in index.html
+   ======================================== */
 .hero {
     min-height: 650px;
     padding: 80px 8%;
@@ -198,7 +150,7 @@ img {
     align-items: center;
     justify-content: space-between;
     gap: 70px;
-    background: linear-gradient(135deg, #f0fdfa 0%, #ffffff 60%);
+    background: linear-gradient(135deg, #f0fdfa, #ffffff);
 }
 
 .hero-content {
@@ -211,14 +163,13 @@ img {
     font-size: 12px;
     font-weight: 800;
     letter-spacing: 1.5px;
-    text-transform: uppercase;
 }
 
 .hero h1 {
     margin: 18px 0;
     font-size: clamp(42px, 6vw, 72px);
     line-height: 1.05;
-    letter-spacing: -2px;
+    letter-spacing: -3px;
 }
 
 .hero h1 span {
@@ -229,34 +180,29 @@ img {
     max-width: 580px;
     color: var(--text);
     font-size: 18px;
-    line-height: 1.7;
 }
 
 .hero-buttons {
     display: flex;
     gap: 15px;
     margin-top: 35px;
-    flex-wrap: wrap;
 }
 
-/* Hero Card */
+/* HERO CARD */
 .hero-card {
     width: 350px;
     background: white;
     border-radius: 20px;
     padding: 30px;
-    box-shadow: 0 25px 70px rgba(15, 118, 110, 0.12);
-    flex-shrink: 0;
+    box-shadow: 0 25px 70px rgba(15, 118, 110, 0.15);
 }
 
 .card-header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     font-size: 11px;
     font-weight: 800;
     letter-spacing: 1px;
-    color: var(--muted);
 }
 
 .status-dot {
@@ -264,13 +210,6 @@ img {
     height: 9px;
     background: var(--success);
     border-radius: 50%;
-    display: inline-block;
-    animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.4; }
 }
 
 .score-circle {
@@ -283,29 +222,19 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    animation: spin 10s linear infinite;
-}
-
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
 }
 
 .score-circle strong {
     font-size: 40px;
-    animation: none;
 }
 
 .score-circle small {
     color: var(--muted);
-    font-size: 16px;
 }
 
 .score-text {
     text-align: center;
     color: var(--muted);
-    font-size: 14px;
 }
 
 .mini-rating {
@@ -319,21 +248,9 @@ img {
     border-bottom: 1px solid var(--border);
 }
 
-.mini-rating div:last-child {
-    border-bottom: none;
-}
-
-.mini-rating span {
-    color: var(--text);
-}
-
-.mini-rating strong {
-    color: var(--primary);
-}
-
-/* ============================================================
-   5. SECTIONS (index.html)
-   ============================================================ */
+/* ========================================
+   SECTIONS - Used in index.html
+   ======================================== */
 .section {
     padding: 90px 8%;
 }
@@ -348,19 +265,16 @@ img {
     font-size: 12px;
     font-weight: 800;
     letter-spacing: 1.5px;
-    text-transform: uppercase;
 }
 
 .section-title h2 {
-    font-size: clamp(32px, 4vw, 42px);
+    font-size: 42px;
     line-height: 1.15;
     margin: 15px 0;
 }
 
 .section-title p {
     color: var(--text);
-    font-size: 17px;
-    line-height: 1.7;
 }
 
 .services-section {
@@ -370,77 +284,68 @@ img {
 .services-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
+    gap: 20px;
 }
 
 .service-card {
-    padding: 30px 25px;
+    padding: 30px;
     border: 1px solid var(--border);
     border-radius: 15px;
     background: white;
-    transition: all 0.3s ease;
-    text-align: center;
+    transition: 0.2s;
 }
 
 .service-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.07);
-    border-color: var(--primary-light);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.07);
 }
 
 .service-icon {
-    font-size: 36px;
+    font-size: 30px;
     margin-bottom: 15px;
-    display: block;
 }
 
 .service-card h3 {
     margin-bottom: 8px;
-    font-size: 18px;
 }
 
 .service-card p {
     color: var(--muted);
     font-size: 14px;
-    line-height: 1.6;
 }
 
-/* ============================================================
-   6. CTA SECTION (index.html)
-   ============================================================ */
+/* ========================================
+   CTA SECTION - Used in index.html
+   ======================================== */
 .cta {
     margin: 70px 8%;
-    padding: 55px 60px;
+    padding: 55px;
     border-radius: 20px;
-    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    background: var(--primary);
     color: white;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 30px;
 }
 
 .cta span {
     font-size: 11px;
     font-weight: 800;
     letter-spacing: 1px;
-    text-transform: uppercase;
-    opacity: 0.8;
 }
 
 .cta h2 {
-    font-size: clamp(28px, 3.5vw, 40px);
+    font-size: 40px;
     margin: 8px 0;
 }
 
 .cta p {
     opacity: 0.85;
-    font-size: 16px;
 }
 
-/* ============================================================
-   7. FOOTER (index.html)
-   ============================================================ */
+/* ========================================
+   FOOTER - Used in index.html
+   ======================================== */
 footer {
     background: #0b2928;
     color: white;
@@ -459,18 +364,16 @@ footer {
 footer p {
     color: #b8c8c7;
     margin-top: 10px;
-    font-size: 14px;
 }
 
 .copyright {
     font-size: 12px;
     margin-top: 30px;
-    opacity: 0.7;
 }
 
-/* ============================================================
-   8. AUTH PAGES (login.html & register.html)
-   ============================================================ */
+/* ========================================
+   AUTH PAGES - Used in login.html & register.html
+   ======================================== */
 .auth-body {
     background: var(--light);
     min-height: 100vh;
@@ -483,22 +386,16 @@ footer p {
 }
 
 .auth-brand {
-    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    background: var(--primary);
     color: white;
-    padding: 40px 50px;
+    padding: 40px;
     position: relative;
-    display: flex;
-    flex-direction: column;
 }
 
 .back-home {
     font-size: 14px;
     opacity: 0.9;
     color: white;
-    transition: opacity 0.2s;
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
 }
 
 .back-home:hover {
@@ -506,11 +403,9 @@ footer p {
 }
 
 .auth-brand-content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 20px 0;
+    position: absolute;
+    left: 15%;
+    top: 40%;
 }
 
 .auth-brand-content h1 {
@@ -524,17 +419,15 @@ footer p {
 
 .auth-brand-content p {
     margin-top: 10px;
-    opacity: 0.85;
-    font-size: 16px;
+    opacity: 0.8;
 }
 
 .logo-icon.large {
     width: 60px;
     height: 60px;
-    font-size: 28px;
+    font-size: 25px;
     background: white;
     color: var(--primary);
-    border-radius: 14px;
 }
 
 .auth-form-container {
@@ -548,9 +441,9 @@ footer p {
     width: 100%;
     max-width: 440px;
     background: white;
-    padding: 45px;
+    padding: 40px;
     border-radius: 18px;
-    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 15px 50px rgba(0,0,0,0.06);
 }
 
 .auth-form.wide {
@@ -565,12 +458,11 @@ footer p {
 .form-description {
     color: var(--muted);
     margin-bottom: 25px;
-    font-size: 15px;
 }
 
-/* ============================================================
-   9. FORM ELEMENTS (login.html, register.html, complaints.html)
-   ============================================================ */
+/* ========================================
+   FORM ELEMENTS - Used in login.html, register.html, complaints.html
+   ======================================== */
 .form-group {
     margin-bottom: 18px;
 }
@@ -580,33 +472,36 @@ footer p {
     margin-bottom: 7px;
     font-size: 13px;
     font-weight: 700;
-    color: var(--dark);
 }
 
 .form-group input,
 .form-group select,
 .form-group textarea {
     width: 100%;
-    padding: 13px 16px;
-    border: 1.5px solid var(--border);
+    padding: 13px 14px;
+    border: 1px solid var(--border);
     border-radius: 8px;
     outline: none;
     background: white;
     font-family: inherit;
-    font-size: 14px;
-    transition: all 0.2s ease;
+}
+
+#complaintForm textarea {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    outline: none;
+    background: white;
+    font-family: inherit;
 }
 
 .form-group input:focus,
 .form-group select:focus,
-.form-group textarea:focus {
+.form-group textarea:focus,
+#complaintForm textarea:focus {
     border-color: var(--primary);
-    box-shadow: 0 0 0 4px var(--primary-light);
-}
-
-.form-group textarea {
-    min-height: 100px;
-    resize: vertical;
+    box-shadow: 0 0 0 3px var(--primary-light);
 }
 
 .form-row {
@@ -621,8 +516,6 @@ footer p {
     align-items: center;
     margin-bottom: 20px;
     font-size: 13px;
-    flex-wrap: wrap;
-    gap: 10px;
 }
 
 .form-options a,
@@ -631,7 +524,6 @@ footer p {
     font-weight: 700;
 }
 
-.form-options a:hover,
 .register-text a:hover {
     text-decoration: underline;
 }
@@ -651,13 +543,13 @@ footer p {
 .auth-divider {
     text-align: center;
     border-bottom: 1px solid var(--border);
-    line-height: 0;
+    line-height: 1px;
     margin: 30px 0;
 }
 
 .auth-divider span {
     background: white;
-    padding: 0 15px;
+    padding: 0 10px;
     color: var(--muted);
     font-size: 12px;
 }
@@ -665,12 +557,11 @@ footer p {
 .register-text {
     text-align: center;
     font-size: 14px;
-    margin-top: 20px;
 }
 
-/* ============================================================
-   10. DASHBOARD HEADER (All Dashboard Pages)
-   ============================================================ */
+/* ========================================
+   DASHBOARD HEADER - Used in all dashboard pages
+   ======================================== */
 .dashboard-header {
     height: 72px;
     background: white;
@@ -679,15 +570,12 @@ footer p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 100;
 }
 
 .user-menu {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
 }
 
 .user-menu strong {
@@ -704,7 +592,6 @@ footer p {
     margin-left: 20px;
     color: var(--danger);
     font-size: 13px;
-    font-weight: 600;
 }
 
 .user-menu > a:hover {
@@ -721,13 +608,11 @@ footer p {
     align-items: center;
     justify-content: center;
     font-weight: 800;
-    font-size: 14px;
-    flex-shrink: 0;
 }
 
-/* ============================================================
-   11. DASHBOARD LAYOUT (All Dashboard Pages)
-   ============================================================ */
+/* ========================================
+   DASHBOARD LAYOUT - Used in all dashboard pages
+   ======================================== */
 .dashboard-layout {
     min-height: calc(100vh - 72px);
     display: flex;
@@ -737,24 +622,20 @@ footer p {
     width: 240px;
     background: #102a2a;
     padding: 25px 15px;
-    position: sticky;
-    top: 72px;
-    height: calc(100vh - 72px);
+    position: relative;
     flex-shrink: 0;
-    overflow-y: auto;
 }
 
 .sidebar-link {
     display: flex;
     align-items: center;
     gap: 13px;
-    padding: 13px 16px;
+    padding: 13px 15px;
     color: #b9cecd;
     border-radius: 8px;
-    margin-bottom: 4px;
+    margin-bottom: 5px;
     font-size: 13px;
-    font-weight: 500;
-    transition: all 0.2s ease;
+    transition: 0.2s;
 }
 
 .sidebar-link:hover,
@@ -763,32 +644,24 @@ footer p {
     color: white;
 }
 
-.sidebar-link span {
-    font-size: 18px;
-    width: 24px;
-    text-align: center;
-}
-
 .sidebar-bottom {
-    margin-top: 30px;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    position: absolute;
+    bottom: 25px;
+    left: 15px;
+    right: 15px;
 }
 
 .dashboard-main {
     flex: 1;
-    padding: 35px 40px;
+    padding: 40px;
     overflow: hidden;
-    background: var(--light);
 }
 
 .dashboard-heading {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     margin-bottom: 30px;
-    flex-wrap: wrap;
-    gap: 15px;
 }
 
 .dashboard-heading h1 {
@@ -798,30 +671,23 @@ footer p {
 
 .dashboard-heading p {
     color: var(--muted);
-    font-size: 15px;
 }
 
-/* ============================================================
-   12. STAT CARDS (student-dashboard.html & admin-dashboard.html)
-   ============================================================ */
+/* ========================================
+   STAT CARDS - Used in student-dashboard.html & admin-dashboard.html
+   ======================================== */
 .stats-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 18px;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 .stat-card {
     background: white;
     border: 1px solid var(--border);
     border-radius: 13px;
-    padding: 22px 25px;
-    transition: all 0.3s ease;
-}
-
-.stat-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+    padding: 22px;
 }
 
 .stat-card span {
@@ -830,23 +696,21 @@ footer p {
     font-size: 10px;
     font-weight: 800;
     letter-spacing: 1px;
-    text-transform: uppercase;
 }
 
 .stat-card strong {
     display: block;
-    font-size: 32px;
+    font-size: 30px;
     margin: 7px 0;
 }
 
 .stat-card small {
     color: var(--muted);
-    font-size: 13px;
 }
 
-/* ============================================================
-   13. DASHBOARD CARDS (All Dashboard Pages)
-   ============================================================ */
+/* ========================================
+   DASHBOARD CARDS - Used in all dashboard pages
+   ======================================== */
 .dashboard-grid {
     display: grid;
     grid-template-columns: 1.3fr 1fr;
@@ -858,14 +722,14 @@ footer p {
     background: white;
     border: 1px solid var(--border);
     border-radius: 13px;
-    padding: 25px 28px;
+    padding: 25px;
 }
 
 .card-heading {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 22px;
+    margin-bottom: 25px;
 }
 
 .card-heading span {
@@ -873,12 +737,10 @@ footer p {
     color: var(--primary);
     font-weight: 800;
     letter-spacing: 1px;
-    text-transform: uppercase;
 }
 
 .card-heading h3 {
-    margin-top: 4px;
-    font-size: 18px;
+    margin-top: 5px;
 }
 
 .card-heading a {
@@ -891,55 +753,40 @@ footer p {
     text-decoration: underline;
 }
 
-/* ============================================================
-   14. RATING BARS (student-dashboard.html & admin-dashboard.html)
-   ============================================================ */
+/* ========================================
+   RATING BARS - Used in student-dashboard.html & admin-dashboard.html
+   ======================================== */
 .rating-overview {
     display: flex;
     align-items: center;
     gap: 40px;
-    flex-wrap: wrap;
 }
 
 .big-rating {
-    font-size: 52px;
+    font-size: 50px;
     font-weight: 800;
-    text-align: center;
-    min-width: 100px;
 }
 
 .big-rating small {
     font-size: 16px;
     color: var(--muted);
-    font-weight: 400;
 }
 
 .rating-bars {
     flex: 1;
-    min-width: 200px;
 }
 
 .rating-row {
     display: grid;
-    grid-template-columns: 90px 1fr 40px;
+    grid-template-columns: 90px 1fr 35px;
     align-items: center;
-    gap: 12px;
-    margin: 12px 0;
+    gap: 10px;
+    margin: 13px 0;
     font-size: 12px;
 }
 
-.rating-row span {
-    color: var(--text);
-    font-weight: 500;
-}
-
-.rating-row strong {
-    text-align: right;
-    color: var(--primary);
-}
-
 .bar {
-    height: 6px;
+    height: 7px;
     background: #e6efee;
     border-radius: 10px;
     overflow: hidden;
@@ -950,19 +797,17 @@ footer p {
     height: 100%;
     background: var(--primary);
     border-radius: 10px;
-    transition: width 1s ease;
 }
 
-/* ============================================================
-   15. COMPLAINT ITEMS (student-dashboard.html, complaints.html & admin-dashboard.html)
-   ============================================================ */
+/* ========================================
+   COMPLAINT ITEMS - Used in student-dashboard.html, complaints.html & admin-dashboard.html
+   ======================================== */
 .complaint-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 0;
     border-bottom: 1px solid var(--border);
-    gap: 15px;
 }
 
 .complaint-item:last-child {
@@ -980,20 +825,12 @@ footer p {
     font-size: 11px;
 }
 
-.complaint-item .complaint-meta {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-}
-
 .status {
-    padding: 4px 14px;
+    padding: 5px 10px;
     border-radius: 20px;
     font-size: 10px;
     font-weight: 800;
     flex-shrink: 0;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
 }
 
 .status.pending {
@@ -1011,27 +848,26 @@ footer p {
     color: var(--success);
 }
 
-/* ============================================================
-   16. ASSESSMENT PAGE (assessment.html)
-   ============================================================ */
+/* ========================================
+   ASSESSMENT PAGE - Used in assessment.html
+   ======================================== */
 .assessment-container {
     max-width: 950px;
     background: white;
     border: 1px solid var(--border);
     border-radius: 15px;
-    padding: 35px;
+    padding: 30px;
 }
 
 .assessment-info {
     background: var(--primary-light);
     border-radius: 10px;
-    padding: 18px 22px;
+    padding: 18px;
     margin-bottom: 25px;
 }
 
 .assessment-info strong {
     display: block;
-    font-size: 18px;
 }
 
 .assessment-info span {
@@ -1050,7 +886,6 @@ footer p {
 
 .assessment-question h3 {
     margin-bottom: 5px;
-    font-size: 18px;
 }
 
 .assessment-question p {
@@ -1061,17 +896,13 @@ footer p {
 .rating-options {
     display: flex;
     gap: 12px;
-    margin-top: 18px;
+    margin-top: 20px;
     flex-wrap: wrap;
 }
 
 .rating-options label {
     text-align: center;
     cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4px;
 }
 
 .rating-options input {
@@ -1079,34 +910,28 @@ footer p {
 }
 
 .rating-options span {
-    width: 46px;
-    height: 46px;
-    border: 2px solid var(--border);
+    width: 45px;
+    height: 45px;
+    border: 1px solid var(--border);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 800;
-    font-size: 16px;
-    transition: all 0.2s ease;
-}
-
-.rating-options label:hover span {
-    border-color: var(--primary);
-    background: var(--primary-light);
+    transition: 0.2s;
 }
 
 .rating-options input:checked + span {
     background: var(--primary);
     color: white;
     border-color: var(--primary);
-    transform: scale(1.05);
 }
 
 .rating-options small {
     display: block;
     font-size: 9px;
     color: var(--muted);
+    margin-top: 5px;
 }
 
 .comment-section {
@@ -1122,19 +947,16 @@ footer p {
 
 .comment-section textarea {
     width: 100%;
-    border: 1.5px solid var(--border);
+    border: 1px solid var(--border);
     border-radius: 8px;
-    padding: 14px 16px;
+    padding: 14px;
     resize: vertical;
     font-family: inherit;
-    font-size: 14px;
-    min-height: 120px;
-    transition: all 0.2s ease;
 }
 
 .comment-section textarea:focus {
     border-color: var(--primary);
-    box-shadow: 0 0 0 4px var(--primary-light);
+    box-shadow: 0 0 0 3px var(--primary-light);
     outline: none;
 }
 
@@ -1143,16 +965,15 @@ footer p {
     text-align: right;
 }
 
-/* ============================================================
-   17. TABLE (admin-dashboard.html)
-   ============================================================ */
+/* ========================================
+   TABLE - Used in admin-dashboard.html
+   ======================================== */
 .table-card {
     margin-top: 20px;
 }
 
 .table-wrapper {
     overflow-x: auto;
-    margin: 0 -5px;
 }
 
 table {
@@ -1162,10 +983,10 @@ table {
 
 th,
 td {
-    padding: 13px 15px;
+    padding: 13px;
     border-bottom: 1px solid var(--border);
     text-align: left;
-    font-size: 13px;
+    font-size: 12px;
 }
 
 th {
@@ -1174,416 +995,162 @@ th {
     text-transform: uppercase;
     font-weight: 800;
     letter-spacing: 0.5px;
-    background: var(--light);
 }
 
 tr:hover td {
-    background: #f8faf9;
+    background: var(--light);
 }
 
-td:first-child {
-    font-weight: 600;
-}
-
-/* ============================================================
-   18. RESPONSIVE DESIGN
-   ============================================================ */
-
-/* Tablets and smaller laptops */
-@media (max-width: 1100px) {
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+@media (max-width: 1000px) {
     .hero {
         flex-direction: column;
         text-align: center;
-        gap: 40px;
     }
-
+    
     .hero p {
-        margin: 0 auto;
+        margin: auto;
     }
-
+    
     .hero-buttons {
         justify-content: center;
     }
-
+    
     .services-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-
+    
     .stats-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-
+    
     .dashboard-grid {
         grid-template-columns: 1fr;
     }
-
+    
     .auth-container {
         grid-template-columns: 1fr;
     }
-
+    
     .auth-brand {
         display: none;
     }
 }
 
-/* Mobile phones */
-@media (max-width: 768px) {
+@media (max-width: 700px) {
     .navbar {
         padding: 0 20px;
-        height: 64px;
     }
-
+    
     .navbar nav {
-        gap: 15px;
+        gap: 12px;
     }
-
-    .navbar nav a:not(:first-child):not(:last-child) {
+    
+    .navbar nav a:nth-child(2),
+    .navbar nav a:nth-child(3) {
         display: none;
     }
-
+    
     .hero {
-        padding: 40px 20px;
-        min-height: auto;
+        padding: 60px 20px;
     }
-
-    .hero h1 {
-        font-size: clamp(32px, 8vw, 42px);
-    }
-
+    
     .hero-card {
         width: 100%;
         max-width: 350px;
     }
-
+    
     .section {
-        padding: 50px 20px;
+        padding: 60px 20px;
     }
-
+    
     .section-title h2 {
-        font-size: 28px;
+        font-size: 32px;
     }
-
+    
     .services-grid {
         grid-template-columns: 1fr;
     }
-
+    
     .cta {
         margin: 30px 20px;
-        padding: 30px 25px;
+        padding: 35px;
         flex-direction: column;
         align-items: flex-start;
-        gap: 20px;
-        text-align: left;
+        gap: 25px;
     }
-
-    .cta h2 {
-        font-size: 28px;
-    }
-
-    /* Dashboard responsive */
+    
     .dashboard-header {
         padding: 0 15px;
-        height: 60px;
     }
-
+    
     .user-menu > div:not(.user-avatar) {
         display: none;
     }
-
-    .user-menu > a {
-        margin-left: 10px;
-        font-size: 12px;
-    }
-
+    
     .sidebar {
-        width: 60px;
+        width: 65px;
         padding: 15px 8px;
-        position: fixed;
-        bottom: 0;
-        top: 60px;
-        height: calc(100vh - 60px);
-        z-index: 99;
-        overflow-y: auto;
     }
-
+    
     .sidebar-link {
         justify-content: center;
         font-size: 0;
-        padding: 12px;
-        border-radius: 10px;
     }
-
+    
     .sidebar-link span {
-        font-size: 20px;
-        width: auto;
+        font-size: 18px;
     }
-
-    .sidebar-link:hover,
-    .sidebar-link.active {
-        background: var(--primary);
-        color: white;
-    }
-
-    .sidebar-bottom .sidebar-link {
-        font-size: 0;
-    }
-
+    
     .dashboard-main {
-        padding: 20px 15px;
-        margin-left: 60px;
+        padding: 25px 15px;
     }
-
+    
     .dashboard-heading {
         flex-direction: column;
         align-items: flex-start;
-        gap: 15px;
+        gap: 20px;
     }
-
-    .dashboard-heading h1 {
-        font-size: 24px;
-    }
-
+    
     .stats-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 12px;
+        grid-template-columns: 1fr;
     }
-
-    .stat-card {
-        padding: 16px 18px;
-    }
-
-    .stat-card strong {
-        font-size: 26px;
-    }
-
-    .dashboard-card {
-        padding: 18px 20px;
-    }
-
+    
     .rating-overview {
         flex-direction: column;
         align-items: stretch;
-        gap: 20px;
     }
-
-    .big-rating {
-        font-size: 40px;
-        min-width: auto;
+    
+    .form-row {
+        grid-template-columns: 1fr;
     }
-
-    .rating-row {
-        grid-template-columns: 80px 1fr 35px;
-        gap: 8px;
-        font-size: 11px;
-    }
-
-    /* Auth responsive */
+    
     .auth-form-container {
         padding: 20px;
     }
-
+    
     .auth-form {
-        padding: 25px 20px;
+        padding: 25px;
     }
-
-    .auth-form h2 {
-        font-size: 24px;
-    }
-
-    .form-row {
-        grid-template-columns: 1fr;
-        gap: 0;
-    }
-
-    /* Assessment responsive */
-    .assessment-container {
-        padding: 20px;
-    }
-
+    
     .rating-options {
-        gap: 6px;
-    }
-
-    .rating-options span {
-        width: 38px;
-        height: 38px;
-        font-size: 14px;
-    }
-
-    .rating-options small {
-        font-size: 8px;
-    }
-
-    /* Table responsive */
-    th,
-    td {
-        padding: 10px 12px;
-        font-size: 11px;
-    }
-
-    /* Complaint items */
-    .complaint-item {
-        flex-wrap: wrap;
-        gap: 8px;
-    }
-
-    .complaint-item .complaint-meta {
-        flex: 1;
-    }
-}
-
-/* Small phones */
-@media (max-width: 480px) {
-    .navbar nav {
-        gap: 10px;
-    }
-
-    .navbar nav a {
-        font-size: 12px;
-    }
-
-    .hero h1 {
-        font-size: 28px;
-        letter-spacing: -1px;
-    }
-
-    .hero p {
-        font-size: 15px;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    }
-
-    .hero-buttons .btn {
-        width: 100%;
+        gap: 5px;
         justify-content: center;
     }
-
-    .stats-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .form-options {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
+    
     .rating-options span {
-        width: 34px;
-        height: 34px;
-        font-size: 12px;
+        width: 40px;
+        height: 40px;
     }
-
-    .dashboard-card .card-heading {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 8px;
+    
+    .auth-brand-content {
+        left: 10%;
+        top: 30%;
     }
-
-    table {
-        font-size: 10px;
-    }
-
-    th,
-    td {
-        padding: 8px 10px;
-        font-size: 10px;
-    }
-
-    .cta {
-        padding: 20px;
-    }
-
-    .cta h2 {
-        font-size: 22px;
-    }
-
+    
     .auth-brand-content h1 {
-        font-size: 28px;
+        font-size: 30px;
     }
-}
-
-/* ============================================================
-   19. UTILITY HELPERS
-   ============================================================ */
-.text-center {
-    text-align: center;
-}
-
-.text-muted {
-    color: var(--muted);
-}
-
-.mt-10 {
-    margin-top: 10px;
-}
-.mt-20 {
-    margin-top: 20px;
-}
-.mt-30 {
-    margin-top: 30px;
-}
-
-.mb-10 {
-    margin-bottom: 10px;
-}
-.mb-20 {
-    margin-bottom: 20px;
-}
-.mb-30 {
-    margin-bottom: 30px;
-}
-
-.hidden {
-    display: none !important;
-}
-
-/* ============================================================
-   20. ACCESSIBILITY - Focus States & Screen Readers
-   ============================================================ */
-:focus-visible {
-    outline: 2px solid var(--primary);
-    outline-offset: 2px;
-}
-
-.sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
-}
-
-/* ============================================================
-   21. ANIMATIONS
-   ============================================================ */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.fade-in {
-    animation: fadeInUp 0.6s ease forwards;
-}
-
-.fade-in-delay-1 {
-    animation-delay: 0.1s;
-}
-.fade-in-delay-2 {
-    animation-delay: 0.2s;
-}
-.fade-in-delay-3 {
-    animation-delay: 0.3s;
 }
