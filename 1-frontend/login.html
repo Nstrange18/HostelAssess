@@ -21,7 +21,7 @@
                 <span class="form-label">WELCOME BACK</span>
                 <h2>Sign in to your account</h2>
                 <p class="form-description">Enter your account details to continue.</p>
-                <form id="loginForm">
+                <form id="loginForm" method="post" autocomplete="on">
                     <div class="form-group">
                         <label for="email">Email Address</label>
                         <input type="email" id="email" name="email" placeholder="you@example.com" required>
@@ -32,7 +32,7 @@
                     </div>
                     <div class="form-options">
                         <label class="checkbox-label">
-                            <input type="checkbox"> Remember me
+                            <input type="checkbox" name="remember"> Remember me
                         </label>
                         <a href="#">Forgot password?</a>
                     </div>
@@ -45,6 +45,10 @@
             </div>
         </div>
     </div>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/api.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
 </html>

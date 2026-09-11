@@ -1,0 +1,32 @@
+{
+  "name": "hostel-assess",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Online hostel service assessment system",
+  "main": "2-backend/server.js",
+  "scripts": {
+    "start": "node 2-backend/server.js",
+    "dev": "nodemon 2-backend/server.js",
+    "seed:hostels": "node 2-backend/scripts/seedHostels.js",
+    "seed:admin": "node 2-backend/scripts/seedAdmin.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0",
+    "express-rate-limit": "^8.1.0",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.18.0",
+    "zod": "^4.1.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10",
+    "supertest": "^7.1.4"
+  }
+}

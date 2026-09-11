@@ -1,0 +1,19 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/", "destination": "/1-frontend/index.html" },
+    { "source": "/assets/:path*", "destination": "/1-frontend/assets/:path*" },
+    { "source": "/index", "destination": "/1-frontend/index.html" },
+    { "source": "/login", "destination": "/1-frontend/login.html" },
+    { "source": "/register", "destination": "/1-frontend/register.html" },
+    { "source": "/student-dashboard", "destination": "/1-frontend/student-dashboard.html" },
+    { "source": "/assessment", "destination": "/1-frontend/assessment.html" },
+    { "source": "/complaints", "destination": "/1-frontend/complaints.html" },
+    { "source": "/admin-dashboard", "destination": "/1-frontend/admin-dashboard.html" },
+    { "source": "/profile", "destination": "/1-frontend/profile.html" },
+    { "source": "/admins", "destination": "/1-frontend/admins.html" },
+    { "source": "/accept-admin-invite", "destination": "/1-frontend/accept-admin-invite.html" },
+    { "source": "/:path*", "destination": "/1-frontend/404.html" }
+  ]
+}

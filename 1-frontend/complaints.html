@@ -13,12 +13,12 @@
             <span>Hostel<span class="logo-highlight">Assess</span></span>
         </div>
         <div class="user-menu">
-            <div class="user-avatar">OE</div>
+            <div class="user-avatar" data-user-initials>--</div>
             <div>
-                <strong>Obichukwu Emmanuel</strong>
+                <strong data-user-name>Loading...</strong>
                 <small>Student</small>
             </div>
-            <a href="index.html">Logout</a>
+            <a href="login.html" data-logout>Logout</a>
         </div>
     </header>
 
@@ -33,11 +33,11 @@
             <a href="complaints.html" class="sidebar-link active">
                 <span>!</span> Complaints
             </a>
-            <a href="#" class="sidebar-link">
+            <a href="profile.html" class="sidebar-link">
                 <span>◉</span> Profile
             </a>
             <div class="sidebar-bottom">
-                <a href="index.html" class="sidebar-link">
+                <a href="login.html" class="sidebar-link" data-logout>
                     <span>↪</span> Logout
                 </a>
             </div>
@@ -63,19 +63,19 @@
                     <form id="complaintForm">
                         <div class="form-group">
                             <label for="category">Complaint Category</label>
-                            <select id="category" required>
+                            <select id="category" name="category" required>
                                 <option value="">Select category</option>
-                                <option>Water Supply</option>
-                                <option>Electricity</option>
-                                <option>Sanitation</option>
-                                <option>Security</option>
-                                <option>Maintenance</option>
-                                <option>Other</option>
+                                <option value="water-supply">Water Supply</option>
+                                <option value="electricity">Electricity</option>
+                                <option value="sanitation">Sanitation</option>
+                                <option value="security">Security</option>
+                                <option value="maintenance">Maintenance</option>
+                                <option value="other">Other</option>
                             </select>
                         </div>
                         <div class="form-group">
                             <label for="description">Description</label>
-                            <textarea id="description" rows="7" placeholder="Describe the problem..." required></textarea>
+                            <textarea id="description" name="description" rows="7" minlength="10" maxlength="1500" placeholder="Describe the problem..." required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary">Submit Complaint</button>
                     </form>
@@ -88,27 +88,14 @@
                             <h3>Complaint history</h3>
                         </div>
                     </div>
-                    <div class="complaint-item">
-                        <div>
-                            <strong>Water Supply</strong>
-                            <small>No water for three days</small>
-                            <small>August 20, 2026</small>
-                        </div>
-                        <span class="status pending">Pending</span>
-                    </div>
-                    <div class="complaint-item">
-                        <div>
-                            <strong>Electricity</strong>
-                            <small>Broken light in corridor</small>
-                            <small>August 14, 2026</small>
-                        </div>
-                        <span class="status resolved">Resolved</span>
-                    </div>
+                    <div data-complaint-history class="skeleton-card" aria-live="polite">Loading complaints...</div>
                 </div>
             </div>
         </main>
     </div>
 
-    <script src="assets/js/script.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="assets/js/config.js"></script><script src="assets/js/api.js"></script><script src="assets/js/script.js"></script>
 </body>
 </html>

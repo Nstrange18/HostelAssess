@@ -61,16 +61,12 @@
                         <label for="hostel">Hostel</label>
                         <select id="hostel" name="hostel" required>
                             <option value="">Select hostel</option>
-                            <option value="1">Okpara Hostel</option>
-                            <option value="2">Alvan Ikoku Hostel</option>
-                            <option value="3">Ezeilo Hostel</option>
-                            <option value="4">Akintola Hostel</option>
-                            <option value="5">Nwafor Orizu Hostel</option>
+                            <option value="">Loading hostels...</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <label for="password">Password</label>
-                        <input type="password" id="password" name="password" placeholder="Create a password" minlength="6" required>
+                        <input type="password" id="password" name="password" placeholder="Create a password" minlength="8" required>
                     </div>
                     <div class="form-group">
                         <label for="confirm_password">Confirm Password</label>
@@ -85,6 +81,10 @@
             </div>
         </div>
     </div>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/api.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
 </html>

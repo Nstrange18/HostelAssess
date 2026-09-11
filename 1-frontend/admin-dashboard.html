@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | HostelAssess</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <header class="dashboard-header">
+    <div class="logo">
+      <div class="logo-icon">H</div><span>Hostel<span class="logo-highlight">Assess</span></span>
+    </div>
+    <div class="user-menu">
+      <div class="user-avatar" data-user-initials>--</div>
+      <div><strong data-user-name>Loading...</strong><small data-user-role>Administrator</small></div><a href="login.html"
+        data-logout>Logout</a>
+    </div>
+  </header>
+  <div class="dashboard-layout">
+    <aside class="sidebar" aria-label="Administration"><a href="admin-dashboard.html" class="sidebar-link active"
+        aria-label="Dashboard"><span aria-hidden="true">▣</span> Dashboard</a><a href="#assessments"
+        class="sidebar-link" aria-label="Assessments"><span aria-hidden="true">★</span> Assessments</a><a
+        href="#complaints" class="sidebar-link" aria-label="Complaints"><span aria-hidden="true">!</span> Complaints</a><a href="#students" class="sidebar-link" aria-label="Students"><span aria-hidden="true">◎</span> Students</a><a href="#hostels" class="sidebar-link" aria-label="Hostels"><span aria-hidden="true">⌂</span> Hostels</a><a href="admins.html" class="sidebar-link" data-institution-only aria-label="Administrators"><span aria-hidden="true">◇</span> Administrators</a><a href="profile.html" class="sidebar-link" aria-label="Profile"><span aria-hidden="true">◉</span> Profile</a>
+      <div class="sidebar-bottom"><a href="login.html" class="sidebar-link" data-logout aria-label="Logout"><span
+            aria-hidden="true">↪</span> Logout</a></div>
+    </aside>
+    <main class="dashboard-main">
+      <div class="skeleton-card" aria-live="polite">Loading dashboard...</div>
+    </main>
+  </div>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/api.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+
+</html>
